@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/images/favicona.png" type="image/x-icon" />
+    <link rel="stylesheet" href="anim.css">
+    <link rel="stylesheet" href="styles.css" />
+
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            const uluru = {
+                lat: 45.023344342294465,
+                lng: 39.03573826908239,
+            };
+            // The map, centered at Uluru
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: uluru,
+            });
+            // The marker, positioned at Uluru
+            const marker = new google.maps.Marker({
+                position: uluru,
+                map: map,
+            });
+        }
+    </script>
+    <title>Figma Land</title>
+</head>
+
+<body>
+    <div class="plashka"><img src="./assets/images/navBrand.png" alt=""></div>
+    <header>
+        <nav>
+            <div class="navContainer">
+                <div class="navBrandContainer">
+                    <a href="index.html">
+                        <img draggable="false" class="navBrandImg" src="./assets/images/navBrand.png" alt="Figma Land" />
+
+                    </a>
+                </div>
+                <div class="navContentExpandBackground"></div>
+                <div class="navContent">
+                    <div class="navLinksContainer">
+                        <ul class="navLinks">
+                            <li class="navLinkContainer">
+                                <a href="#" class="navLink">Home</a>
+                            </li>
+                            <li class="navLinkContainer">
+                                <a href="#" class="navLink">Product</a>
+                            </li>
+                            <li class="navLinkContainer">
+                                <a href="#" class="navLink">Pricing</a>
+                            </li>
+                            <li class="navLinkContainer">
+                                <a href="#" class="navLink">About</a>
+                            </li>
+                            <li class="navLinkContainer">
+                                <a href="#" class="navLink">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navFormContainer">
+                        <form class="navForm" action="">
+                            <input type="email" placeholder="Your Email" class="navEmailInput" />
+                            <input type="submit" value="Subscribe" class="subInput navSubInput" />
+                        </form>
+                    </div>
+                </div>
+                <div class="navContentButton">
+                    <button class="navButton"><img src="./assets/images/navMenu.png" alt=""></button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="headerContainer">
+            <div class="headerContent">
+                <div class="headerImgContainer">
+                    <img src="./assets/images/headerImg.png" alt="" class="headerImg" />
+                </div>
+                <div class="TextContent">
+                    <div class="headerTextContainer">
+                        <h2 class="headerTextTitle">We focus on ergonomics</h2>
+                        <p class="headerTextDescription">
+                            Most calendars are designed for teams. Slate is designed for freelancers
+                        </p>
+                        <button class="CallToActionButton">Try For Free</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="features">
+            <div class="featuresContainer">
+                <div class="title featuresTitle">
+                    <h3 class="span TitleUp">At your fingertips</h3>
+                    <h2 class="TitleText">Features</h2>
+                    <h3 class="TitleDescription">
+                        Most calendars are designed for teams. Slate is designed for freelancers
+                    </h3>
+                </div>
+                <div class="featuresCardsContainer">
+                    <div class="featuresCard">
+                        <div class="featuresCardTop">
+                            <div class="featureImg">
+                                <img src="./assets/images/features1.png" alt="" class="featuresCardImg" />
+                            </div>
+                            <span class="featuresCardTopText">The best products start with Sketch</span
+                >
+              </div>
+              <div class="featuresCardContent">
+                <p class="featuresContentText">
+                  Slate helps you see how many more days you need to work to
+                  reach your financial goal.
+                </p>
+              </div>
+            </div>
+            <div class="featuresCard">
+              <div class="featuresCardTop">
+                <div class="featureImg">
+                  <img
+                    src="./assets/images/features2.png"
+                    alt=""
+                    class="featuresCardImg"
+                  />
+                </div>
+                <span class="featuresCardTopText"
+                  >Fastest way to<br />
+                  organize</span
+                >
+              </div>
+              <div class="featuresCardContent">
+                <p class="featuresContentText">
+                  Slate helps you see how many more days you need to work to
+                  reach your financial goal.
+                </p>
+              </div>
+            </div>
+            <div class="featuresCard">
+              <div class="featuresCardTop">
+                <div class="featureImg">
+                  <img
+                    src="./assets/images/features3.png"
+                    alt=""
+                    class="featuresCardImg"
+                  />
+                </div>
+                <span class="featuresCardTopText"
+                  >Work better <br />
+                  together</span
+                >
+              </div>
+              <div class="featuresCardContent">
+                <p class="featuresContentText">
+                  Slate helps you see how many more days you need to work to
+                  reach your financial goal.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="hero">
+        <div class="heroContainer">
+          <div class="title heroTitle">
+            <h2 class="TitleText">Lightning fast prototyping</h2>
+            <h4 class="TitleDescription">
+              Most calendars are designed for teams. Slate is designed for
+              freelancers
+            </h4>
+            <button class="CallToActionButton BlueBtn">Try For Free</button>
+          </div>
+          <div class="heroContent">
+            <div class="heroContentImg">
+              <img
+                draggable="false"
+                src="./assets/images/laptop.png"
+                alt=""
+                class="heroContentImg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="light">
+        <div class="lightContainer">
+          <div class="title lightTitle">
+            <h3 class="TitleUp">At your fingertips</h3>
+            <h2 class="TitleText">Lightning fast prototyping</h2>
+          </div>
+          <div class="lightContent">
+            <div class="lightContentText">
+              <h3 class="TitleUp lightContentTextUp">
+                Subscribe to our Newsletter
+              </h3>
+              <p class="contentText lightContentTextP">
+                Available exclusivery on Figmaland
+              </p>
+            </div>
+            <div class="lightContentFormContainer">
+              <form action="" class="lightContentForm">
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  class="lightEmail"
+                />
+                <input
+                  type="submit"
+                  value="Subscribe"
+                  class="lightSub subInput"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="partners">
+        <div class="partnersContainer">
+          <div class="partnersTitle">
+            <h2 class="TitleText">Partners</h2>
+            <h3 class="TitleDescription">
+              Most calendars are designed for teams. Slate is designed for
+              freelancers
+            </h3>
+          </div>
+          <div class="partnersContent">
+            <div class="partnersContentCell">
+              <h3 class="TitleUp">Client Name</h3>
+              <div class="partnersCellImgContainer">
+                <img src="./assets/images/partners1.png" alt="" />
+              </div>
+              <p class="TextContent">
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+            </div>
+            <div class="partnersContentCell">
+              <h3 class="TitleUp">Client Name</h3>
+              <div class="partnersCellImgContainer">
+                <img src="./assets/images/partners2.png" alt="" />
+              </div>
+              <p class="TextContent">
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+            </div>
+            <div class="partnersContentCell">
+              <h3 class="TitleUp">Client Name</h3>
+              <div class="partnersCellImgContainer">
+                <img src="./assets/images/partners3-4.png" alt="" />
+              </div>
+              <p class="TextContent">
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+            </div>
+            <div class="partnersContentCell">
+              <h3 class="TitleUp">Client Name</h3>
+              <div class="partnersCellImgContainer">
+                <img src="./assets/images/partners3-4.png" alt="" />
+              </div>
+              <p class="TextContent">
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+            </div>
+            <div class="partnersContentCell">
+              <h3 class="TitleUp">Client Name</h3>
+              <div class="partnersCellImgContainer">
+                <img src="./assets/images/partners5.png" alt="" />
+              </div>
+              <p class="TextContent">
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+            </div>
+            <div class="partnersContentCell">
+              <h3 class="TitleUp">Client Name</h3>
+              <div class="partnersCellImgContainer">
+                <img src="./assets/images/partners6.png" alt="" />
+              </div>
+              <p class="TextContent">
+                Slate helps you see how many more days you need to work to reach
+                your financial goal for the month and year.
+              </p>
+            </div>
+          </div>
+          <div class="partnersButton">
+            <button class="CallToActionButton BlueBtn">Try For Free</button>
+          </div>
+        </div>
+      </section>
+      <section class="testimonials">
+        <div class="testimonialsContainer">
+          <div class="testimonialsTitle">
+            <h2 class="TitleText">Testimonials</h2>
+            <img src="./assets/images/Testimonials1.png" alt="" />
+            <h3 class="TitleDescription">
+              Most calendars are designed for teams. Slate is designed for
+              freelancers who want a simple way to plan their schedule.
+            </h3>
+          </div>
+          <div class="testimonialsContent">
+            <div class="userComment">
+              <div class="userCommentImg">
+                <img src="./assets/images/Testimonials2.png" alt="" />
+              </div>
+              <div class="userCommentText">
+                <h3 class="TitleUp">Organize across</h3>
+                <p class="textContent">Ui designer</p>
+              </div>
+            </div>
+            <div class="testimonialsButton">
+              <button class="CallToActionButton BlueBtn">
+                More Testimonials
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pricing">
+        <div class="title pricingTitle">
+          <h2 class="TitleText">Pricing</h2>
+          <h3 class="TitleDescription">
+            Most calendars are designed for teams. Slate is designed for
+            freelancers
+          </h3>
+        </div>
+        <div class="pricingCardsContainer">
+          <div class="pricingCard">
+            <div class="pricingCardText">
+              <h3>Free</h3>
+              <p>Organize across all apps by hand</p>
+            </div>
+            <div class="pricingCardPrice">
+              <h1>0</h1>
+              <div class="pricingCardPriceDescription">
+                <p class="pricingTop">$</p>
+                <p class="pricingBottom">Per Month</p>
+              </div>
+            </div>
+            <div class="pricingCardButton">
+              <button class="CallToActionButton BlueBtn">Order Now</button>
+            </div>
+          </div>
+          <div class="pricingCard pricingCardChangeble">
+            <div class="pricingCardText">
+              <h3>STANDARD</h3>
+              <p>Organize across all apps by hand</p>
+            </div>
+            <div class="pricingCardPrice">
+              <h1>10</h1>
+              <div class="pricingCardPriceDescription">
+                <p class="pricingTop">$</p>
+                <p class="pricingBottom">Per Month</p>
+              </div>
+            </div>
+            <div class="pricingCardButton">
+              <button class="CallToActionButton BlueBtn">Order Now</button>
+            </div>
+          </div>
+          <div class="pricingCard bussines">
+            <div class="pricingCardText">
+              <h3>BUSINESS</h3>
+              <p>Organize across all apps by hand</p>
+            </div>
+            <div class="pricingCardPrice">
+              <h1>99</h1>
+              <div class="pricingCardPriceDescription">
+                <p class="pricingTop">$</p>
+                <p class="pricingBottom">Per Month</p>
+              </div>
+            </div>
+            <div class="pricingCardButton">
+              <button class="CallToActionButton BlueBtn">Order Now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contactUs">
+        <div class="title contacUsTitle">
+          <h2 class="TitleText">ContactUs</h2>
+          <h3 class="TitleDescription">
+            Most calendars are designed for teams. Slate is designed for
+            freelancers
+          </h3>
+        </div>
+        <div class="contactUsContent">
+          <div class="contactUsFormCard">
+            <h3 class="contactFormTitle TitleDescription">Contact Us</h3>
+            <div class="contactUsFormContainer">
+              <form class="contactUsForm" action="">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  name="Name"
+                  id="contactName"
+                />
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  name="Email"
+                  id="contactEmail"
+                />
+                <textarea
+                  placeholder="Your Message"
+                  name="Message"
+                  id="contactMessage"
+                ></textarea>
+                <input
+                  type="submit"
+                  class="subInput CallToActionButton pinkBtn"
+                  value="Send"
+                  id="contactBtn"
+                />
+              </form>
+            </div>
+          </div>
+          <div class="contactUsInfoContainer">
+            <div class="InfoText">
+              <div class="infoTextMap infoTextItem">
+                <div class="infoImg">
+                  <img src="./assets/images/contactUs1.png" alt="Map" />
+                </div>
+                <div class="infoItemText">
+                  <h5>
+                    6386 Spring St undefined Anchorage, Georgia 12473 United
+                    States
+                  </h5>
+                </div>
+              </div>
+              <div class="infoTextPhone infoTextItem">
+                <div class="infoTextMap infoTextItem">
+                  <div class="infoImg">
+                    <img src="./assets/images/contactUs2.png" alt="Map" />
+                  </div>
+                  <div class="infoItemText">
+                    <h5>(843) 555-0130</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="infoTextMail infoTextItem">
+                <div class="infoTextMap infoTextItem">
+                  <div class="infoImg">
+                    <img src="./assets/images/contactUs3.png" alt="Map" />
+                  </div>
+                  <div class="infoItemText">
+                    <h5>willie.jennings@example.com</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="infoLinks">
+              <a href="#"
+                ><img src="./assets/images/contactUs4.png" alt=""
+              /></a>
+              <a href="#"
+                ><img src="./assets/images/contactUs5.png" alt=""
+              /></a>
+              <a href="#"
+                ><img src="./assets/images/contactUs6.png" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="footerContainer">
+          <div class="footerLinks">
+            <a href="#" class="footerLink footerLinkHeadContainer">
+              <h3 class="footerLinkHead">Pages</h3>
+            </a>
+            <a href="#" class="footerLink">Eleanor Edwards</a>
+            <a href="#" class="footerLink">Ted Robertson</a>
+            <a href="#" class="footerLink">Annette Russell</a>
+            <a href="#" class="footerLink">Jennie Mckinney</a>
+            <a href="#" class="footerLink">Gloria Richards</a>
+          </div>
+
+          <div id="map" class="footerMap"></div>
+          <div class="InfoContainer footerInfo">
+            <div class="InfoText">
+              <div class="infoTextMap infoTextItem">
+                <div class="infoImg">
+                  <img src="./assets/images/contactUs1.png" alt="Map" />
+                </div>
+                <div class="infoItemText">
+                  <h5>
+                    6386 Spring St undefined Anchorage, Georgia 12473 United
+                    States
+                  </h5>
+                </div>
+              </div>
+              <div class="infoTextPhone infoTextItem">
+                <div class="infoTextMap infoTextItem">
+                  <div class="infoImg">
+                    <img src="./assets/images/contactUs2.png" alt="Map" />
+                  </div>
+                  <div class="infoItemText">
+                    <h5>(843) 555-0130</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="infoTextMail infoTextItem">
+                <div class="infoTextMap infoTextItem">
+                  <div class="infoImg">
+                    <img src="./assets/images/contactUs3.png" alt="Map" />
+                  </div>
+                  <div class="infoItemText">
+                    <h5>willie.jennings@example.com</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="infoLinks">
+              <a href="#"
+                ><img src="./assets/images/contactUs4.png" alt=""
+              /></a>
+              <a href="#"
+                ><img src="./assets/images/contactUs5.png" alt=""
+              /></a>
+              <a href="#"
+                ><img src="./assets/images/contactUs6.png" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="index.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwrnAbCl0hPhkn8tOmBRbQJtdaL3kLzaM&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+  </body>
+</html>

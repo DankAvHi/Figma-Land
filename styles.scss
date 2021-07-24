@@ -1,0 +1,979 @@
+$sm: 540px;
+$md: 720px;
+$lg: 960px;
+$xl: 1140px;
+$primaryPink: #ef2779;
+$primaryBlue: #38a3f1;
+$background: #252b42;
+$email: #efefef;
+$emailText: #18171d;
+$contactUsBG:#D6EBFF;
+$bussinesGradient1:#EF2779;
+$bussinesGradient2:#7834BE;
+$navLinkFS: 15px;
+$navEmailFS: 14px;
+$navSubFS: 16px;
+$headerContentTextTitleFS: 55px;
+$headerContentTextDescriptionFS: 16px;
+$headerContentButtonFS: 22px;
+* {
+    font-family: Roboto;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section {
+    padding: 100px 0;
+}
+
+@media screen and(max-width:$md) {
+    section {
+        padding: 50px 0;
+    }
+}
+
+@media screen and(max-width:320px) {
+    section {
+        max-width: 320px;
+    }
+}
+
+button,
+.subInput {
+    cursor: pointer;
+}
+
+button:active,
+.subInput:active {
+    opacity: 0.5;
+    transition: 0.1s;
+}
+
+button:hover,
+.subInput:hover {
+    box-shadow: $primaryPink 0 0 10px 10px;
+    transition: 0.5s;
+}
+
+body {
+    background-color: $background;
+    overflow-x: hidden;
+}
+
+.plashka {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #D6EBFF;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 10000000;
+}
+
+.dN {
+    display: none;
+}
+
+.navContainer {
+    padding-top: 38px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+.navContent {
+    display: flex;
+    position: relative;
+}
+
+.navLinksContainer {
+    margin-right: 23px;
+    display: flex;
+    .navLinks {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        .navLinkContainer {
+            margin: 0 21px;
+            .navLink {
+                text-decoration: none;
+                color: white;
+                font-size: $navLinkFS;
+            }
+        }
+    }
+}
+
+.navEmailInput {
+    background-color: $email;
+    border: none;
+    border-radius: 39px;
+    width: 273px;
+    height: 54px;
+    color: $emailText;
+    font-size: $navEmailFS;
+    padding: 0 10px;
+}
+
+.navEmailInput::placeholder {
+    padding-left: 39px;
+}
+
+.navSubInput {
+    background-color: white;
+    border: none;
+    color: $primaryPink;
+    width: 141px;
+    height: 54px;
+    border-radius: 35px;
+    font-size: $navSubFS;
+}
+
+.navFormContainer {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and(max-width:1130px) {
+    .navForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .navSubInput {
+        margin-top: 10px;
+        width: 100%;
+    }
+    .navLinksContainer {
+        height: 50%;
+    }
+}
+
+.navContentButton {
+    display: none;
+}
+
+.navBrandContainer {
+    position: relative;
+}
+
+@media screen and(max-width:$lg) {
+    .navContainer {
+        margin: 0;
+        padding: 15px;
+    }
+    .navBrandContainer {
+        display: flex;
+        align-items: center;
+    }
+    .navContentExpandBackground {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #18171d62;
+        display: none;
+    }
+    .navContentExpandBackground.open {
+        display: block;
+    }
+    .navContent {
+        overflow: scroll;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        height: 150%;
+        background-color: $background;
+        width: 320px;
+        align-items: center;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    .navContent.open {
+        right: 0;
+    }
+    .navFormContainer {
+        margin-top: 120px;
+        margin-bottom: 15px;
+    }
+    .navContentButton {
+        z-index: 2;
+        top: 25px;
+        right: 25px;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        button {
+            border: none;
+            background-color: #f5f5f500;
+            border-radius: 4px;
+        }
+    }
+    .navLinksContainer {
+        justify-content: center;
+    }
+    .navLinks {
+        flex-direction: column;
+    }
+    .navLinkContainer {
+        margin: 15px 0!important;
+    }
+    .navLink {
+        font-size: 25px!important;
+    }
+    @media screen and(max-height:550px) {
+        .navContent {
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .navLinks {
+            flex-direction: row;
+        }
+        .navLinkContainer {
+            margin: 10px!important;
+        }
+        .navFormContainer {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+header {
+    background-image: url("./assets/images/headerBackground.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    animation-name: headerBackground;
+    animation-duration: 1s;
+}
+
+.headerContent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    .TextContent {
+        order: 1;
+    }
+}
+
+.headerImgContainer {
+    order: 0;
+}
+
+.headerImg {
+    position: relative;
+}
+
+.TextContent {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.headerTextContainer {
+    margin-left: 20%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerTextTitle {
+    font-size: $headerContentTextTitleFS;
+    max-width: 321px;
+    font-weight: 900;
+    line-height: 65px;
+    margin-bottom: 24px;
+}
+
+.headerTextDescription {
+    font-size: $headerContentTextDescriptionFS;
+    font-weight: 700;
+    max-width: 298px;
+    line-height: 20px;
+    margin-bottom: 60px;
+}
+
+.CallToActionButton {
+    font-weight: 700;
+    color: $primaryBlue;
+    font-size: $headerContentButtonFS;
+    border: none;
+    border-radius: 35px;
+    width: 236px;
+    height: 65px;
+}
+
+.CallToActionButton.pinkBtn {
+    background-color: $primaryPink;
+}
+
+.CallToActionButton.BlueBtn {
+    background-color: $primaryBlue;
+    color: white;
+}
+
+@media screen and(min-width:$lg) and(max-width:1300px) {
+    .TextContent {
+        justify-content: center;
+    }
+    .headerTextContainer {
+        margin-left: 0;
+        max-height: 300px;
+    }
+    .headerImgContainer {
+        width: 95%;
+    }
+    .headerImg {
+        width: 100%;
+    }
+}
+
+@media screen and(max-width:1040px) {
+    .headerContent {
+        flex-direction: column;
+        .TextContent {
+            order: 0;
+            justify-content: center;
+        }
+    }
+    .headerImgContainer {
+        order: 1;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.TitleUp {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+    margin-bottom: 24px;
+}
+
+.TitleText {
+    font-size: 46px;
+    line-height: 57px;
+    margin-bottom: 24px;
+    font-weight: 400;
+}
+
+.TitleDescription {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 318px;
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+    color: white;
+    text-align: center;
+}
+
+@media screen and(max-width:1040px) {
+    .textContent {}
+    .headerTextContainer {
+        margin: 0;
+        align-items: center;
+    }
+    .headerTextTitle {
+        font-weight: 400;
+        font-size: 44px;
+        text-align: center;
+    }
+    .headerTextDescription {
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+    }
+    .headerImgContainer {
+        margin-top: 65px;
+    }
+}
+
+.features {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    // margin-top: 81px;
+    // margin-bottom: 180px;
+}
+
+.featuresContainer {
+    max-width: 923px;
+}
+
+.featuresCardsContainer {
+    display: flex;
+    align-items: center;
+    .featuresCard {
+        margin: 0 26px;
+        .featuresCardTop {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            .featureImg {
+                margin-right: 10px;
+            }
+            .featuresCardTopText {
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 33px;
+            }
+        }
+        .featuresCardContent {
+            .featuresContentText {
+                font-size: 18px;
+                line-height: 27px;
+            }
+        }
+    }
+}
+
+@media screen and(max-width:$md) {
+    .featuresCardsContainer {
+        flex-direction: column;
+    }
+    .featuresCard {
+        margin: 75px 71px!important;
+    }
+    .featuresCardTopText {
+        font-size: 16px!important;
+    }
+}
+
+@media screen and(max-width:$sm) {
+    .featuresCard {
+        margin: 60px 10px!important;
+    }
+}
+
+.heroContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heroContentImg {
+    width: 100%;
+}
+
+.heroTitle {
+    button {
+        margin-top: 80px;
+        // background-color: $primaryBlue;
+        color: white;
+    }
+}
+
+.lightContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lightContent {
+    width: 373px;
+    text-align: center;
+}
+
+.contentText {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.lightContentTextUp {
+    color: white;
+}
+
+.lightContentFormContainer {
+    margin-top: 34px;
+    display: flex;
+    justify-content: center;
+}
+
+.lightContentForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 353px;
+}
+
+@media screen and(max-width:$md) {
+    .lightContentForm {
+        min-width: 310px;
+    }
+}
+
+.lightEmail {
+    width: 100%;
+    background-color: $email;
+    border: 0;
+    border-radius: 40px;
+    height: 54px;
+    color: $emailText;
+    font-size: 14px;
+    padding: 0 35px;
+    margin-bottom: 12px;
+}
+
+.lightSub {
+    width: 100%;
+    background-color: $primaryPink;
+    border: 0;
+    border-radius: 40px;
+    height: 54px;
+    color: white;
+    font-size: 14px;
+}
+
+.partners {
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    // margin-bottom: 181px;
+    .TitleUp {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+}
+
+.partnersContainer {
+    max-width: 922px;
+}
+
+.partnersTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.partnersContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 10px;
+}
+
+@media screen and(max-width:$md) {
+    .partnersContent {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-auto-rows: 0;
+        overflow-y: hidden;
+    }
+}
+
+.partnersContentCell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 238px;
+    min-height: 312px;
+    margin: 0 52px;
+    margin-bottom: 70px;
+}
+
+.partnersCellImgContainer {
+    min-height: 155px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.testimonials {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonialsContainer {
+    max-width: 715px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .TitleText {
+        margin-bottom: 90px;
+    }
+    .TitleDescription {
+        margin-bottom: 50px;
+        margin-top: 50px;
+        max-width: max-content;
+    }
+}
+
+.testimonialsTitle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.testimonialsContent {
+    img {
+        margin-bottom: 0;
+    }
+}
+
+.userComment {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+    .TitleUp {
+        margin-bottom: 1px;
+    }
+    .userCommentImg {
+        margin-right: 13px;
+    }
+}
+
+.pricingTitle {
+    margin-bottom: 90px;
+}
+
+.pricingCardsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1105px;
+    margin: 0 auto;
+}
+
+@media screen and(max-width:1050px) {
+    .pricingCardsContainer {
+        flex-direction: column;
+    }
+    .pricingCard {
+        margin-bottom: 20px;
+    }
+}
+
+.pricingCard {
+    padding: 40px;
+    border-radius: 10px;
+    color: $background;
+    background-color: white;
+    button {
+        width: 255px;
+        height: 52px;
+    }
+}
+
+@media screen and(max-width:1052px) {
+    .pricingCard {
+        padding: 20px;
+        max-width: 320px;
+    }
+    .bussines {
+        order: 0;
+    }
+    .pricingCardChangeble {
+        order: 1;
+    }
+}
+
+.bussines {
+    background: rgb(239, 39, 121);
+    background: linear-gradient(45deg, rgba(239, 39, 121, 1) 0%, rgba(120, 52, 190, 1) 100%);
+    color: white;
+}
+
+.pricingCardText {
+    h3 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 16px;
+    }
+    margin-bottom: 30px;
+}
+
+.pricingCardPrice {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    h1 {
+        font-size: 55px;
+        font-weight: 900;
+    }
+    .pricingCardPriceDescription {
+        margin-left: 10px;
+        .pricingTop {
+            font-weight: 700;
+            font-size: 22px;
+        }
+        .pricingBottom {
+            font-weight: 700;
+        }
+    }
+}
+
+.contactUs {
+    background-color: $contactUsBG;
+    color: $background;
+}
+
+.contactUsContent {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contacUsTitle {
+    color: $background;
+}
+
+.contactUsFormCard {
+    order: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 15px;
+    padding: 26px 41px;
+    width: 400px;
+    box-shadow: 0px 8.4982328414917px 12.42049503326416px 0px #00000012;
+}
+
+@media screen and(max-width:$md) {
+    .contactUsFormCard {
+        width: 310px;
+    }
+}
+
+.contactUsFormContainer {
+    width: 100%;
+}
+
+.contactUsForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 320px;
+    margin: 0 auto;
+    #contactName,
+    #contactMessage,
+    #contactEmail {
+        width: 100%;
+        border: none;
+        background-color: #F5F5F5;
+        border-radius: 40px;
+        min-height: 36px;
+        padding-left: 30px;
+        margin: 15px 0;
+    }
+    #contactBtn {
+        color: white;
+        width: 100px;
+        height: 35px;
+        font-weight: 500;
+        font-size: 10px;
+        align-self: flex-start;
+    }
+    #contactMessage {
+        padding: 20px;
+        border-radius: 4px;
+        height: 130px;
+        font-size: 12px;
+        width: 100%;
+    }
+}
+
+.InfoContainer {
+    order: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.infoTextItem {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.infoItemText {
+    max-width: 300px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.InfoText {
+    margin-bottom: 70px;
+}
+
+.infoLinks {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    a {
+        margin: 0 24px;
+    }
+}
+
+@media screen and(max-width:790px) {
+    .contactUsContent {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contactUsInfoContainer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .InfoContainer {
+        order: 0;
+        max-width: 310px;
+    }
+    .contactUsFormCard {
+        margin-top: 50px;
+        min-height: 670px;
+        order: 1;
+        width: 378px;
+        padding: 52px 42px;
+        justify-content: space-around;
+        #contactBtn {
+            width: 145px;
+            height: 52px;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        .contactFormTitle {
+            font-weight: 700;
+            font-size: 22px;
+        }
+        #contactBtn,
+        #contactEmail,
+        #contactMessage,
+        #contactName {
+            margin: 22.5px 0;
+            min-height: 54px;
+        }
+    }
+}
+
+@media screen and(max-width:790px) {
+    .contactUsFormCard {
+        width: 310px;
+    }
+}
+
+.footerContainer {
+    padding: 120px 204px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 71px;
+    .footerLinkHead {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 33px;
+    }
+    .footerLink {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 27px;
+        margin-bottom: 16px;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.footerMap {
+    width: 472px;
+    height: 247px;
+    border-radius: 22px;
+    margin: 0 50px;
+    background-color: #ef2779;
+    .gmnoprint {
+        display: none;
+    }
+}
+
+.footerInfo {
+    color: white;
+}
+
+@media screen and(max-width:1530px) {
+    .footerLinks {
+        width: 200px;
+        margin: 10px;
+    }
+    .footerContainer {
+        justify-content: space-between;
+    }
+    .footerMap {
+        margin: 10px;
+    }
+}
+
+@media screen and(max-width:1200px) {
+    .footerContainer {
+        padding: 126px 50px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footerMap {
+        margin: 55px 0;
+        width: 358px;
+    }
+}
+
+@media screen and(max-width:790px) {
+    .footerMap {
+        width: 310px;
+    }
+    .infoImg {
+        width: 20px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and(max-width:375px) {
+    * {
+        max-width: 100%;
+    }
+}

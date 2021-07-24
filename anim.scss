@@ -1,0 +1,66 @@
+@import url('./styles.scss');
+body {
+    animation-name: body;
+    animation-duration: 2s;
+}
+
+.navBrandContainer {
+    animation-name: navBrandContainer;
+    animation-duration: 2s;
+}
+
+.headerImg {
+    animation-name: headerImg;
+    animation-duration: 4s;
+}
+
+.navContent {
+    animation-name: navContent;
+    animation-duration: 4s;
+}
+
+.headerTextContainer {
+    animation-name: headerTextContainer;
+    animation-duration: 4s;
+}
+
+@keyframes headerImg {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+@keyframes headerTextContainer {
+    from {
+        height: 0;
+        overflow: hidden;
+    }
+    95% {
+        overflow: hidden;
+    }
+    to {
+        height: 325px;
+    }
+}
+
+@media screen and (min-width:720px) {
+    @keyframes navBrandContainer {
+        from {
+            left: -100%;
+        }
+        to {
+            left: 0;
+        }
+    }
+    @keyframes navContent {
+        from {
+            right: -100%;
+        }
+        to {
+            right: 0;
+        }
+    }
+}
